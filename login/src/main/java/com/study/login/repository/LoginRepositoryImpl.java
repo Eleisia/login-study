@@ -24,6 +24,6 @@ public class LoginRepositoryImpl implements LoginRepository{
     }
 
     public List<UserSummaryDto> findAllDto() {
-        return em.createQuery("select new jpql.PlayerDTO(u.userId, u.userEmail, u.userName, u.userPhoneNumber) from Users u", UserSummaryDto.class).getResultList();
+        return em.createQuery("select new com.study.login.domain.dto.UserSummaryDto(u.userId, u.userEmail, u.userName, u.userPhoneNumber) from Users u", UserSummaryDto.class).getResultList();
     }
 }

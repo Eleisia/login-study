@@ -13,7 +13,7 @@ public class UserDto {
 
     private String userId;
     private String userPassword;
-    private String UserName;
+    private String userName;
     private String userEmail;
     private String userPhoneNumber;
 
@@ -22,6 +22,7 @@ public class UserDto {
                 .userId(userId)
                 .userEmail(userEmail)
                 .userPhoneNumber(userPhoneNumber)
+                .userName(userName)
                 .build();
     }
 }

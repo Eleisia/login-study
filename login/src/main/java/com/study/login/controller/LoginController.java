@@ -24,14 +24,16 @@ public class LoginController {
         return loginService.findAllUser();
     }
 
-    @PostMapping
+    @GetMapping(value = "/dto")
+    public List<UserSummaryDto> findAllDto() {
+        return loginService.findAllDto();
+    }
+
+    @PostMapping(value = "/save")
     public ResponseEntity<?> save(@RequestBody UserDto userDto) {
         Users users = loginService.registUser(userDto);
         return new ResponseEntity<>(users, HttpStatus.ACCEPTED);
     }
 
-    @GetMapping(value = "/dto")
-    public List<UserSummaryDto> findAllDto() {
-        return loginService.findAllDto();
-    }
+
 }

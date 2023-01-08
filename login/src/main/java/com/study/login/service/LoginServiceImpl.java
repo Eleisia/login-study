@@ -32,7 +32,7 @@ public class LoginServiceImpl implements LoginService{
     }
 
     public List<UsersSummary> findAllUser() {
-        return usersSummaryRepository.findAll();
+        return usersSummaryRepository.findAllProjectedBy();
     }
 
     public  List<UserSummaryDto> findAllDto() {

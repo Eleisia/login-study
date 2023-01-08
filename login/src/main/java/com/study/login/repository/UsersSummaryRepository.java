@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface UsersSummaryRepository extends JpaRepository<Users, Long> {
-    List<UsersSummary> findAll();
+    List<UsersSummary> findAllProjectedBy();
 }
